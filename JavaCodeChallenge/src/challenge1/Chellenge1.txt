@@ -1,0 +1,37 @@
+A security company needs codebreaker game which counts number of turn taking to break a
+randomly generated numeric code, for their research.
+
+
+Rules laid down for the process are:
+
+1. System generates a random three digit numeric code "xxx"
+2. User who is taking guesses has too much above code "xxx" to end the game.
+3. Every time the user takes a guess "g" system returns of cryptic message "m" which is encoded for "xxx".
+4. Encoding "xxx" is done by replacing digits with placeholders as follows:
+	>> Literal 'X' for every digit which is not in the guess.
+	>> Literal 'P' for every digit which is in the gas but not in correct place.
+	>> Literal 'M' for every digit which is both present and in correct place.
+5. Finally you have to output number of turns needed for cracking the code.
+
+
+Example:
+
+Let's assume system generated code "xxx" is 573
+*guess is user input, and the cryptic message is output
+
+guess 1 : 156
+cryptic message: PXX
+
+guess 2 : 123
+cryptic message: XXM
+
+guess 3 : 953
+cryptic message: PXM
+
+guess 4 : 543
+cryptic message: MXM
+
+guess 5 : 573
+cryptic message: MMM
+
+final output : 5
